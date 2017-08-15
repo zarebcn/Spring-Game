@@ -35,7 +35,6 @@ public class GameController {
         games.add(new Game("Fallout 4", "Bethesda", "RPG", 10));
         games.add(new Game("Call of Duty 4 Modern Warfare Remastered", "Raven Software", "FPS", 11));
         games.add(new Game("Wolfenstein 2 The New Colossus", "MachineGames", "FPS", 12));
-
     }
 
     @RequestMapping
@@ -59,6 +58,7 @@ public class GameController {
             return MustacheUtil.processTemplate("game.html", map);
 
         } else {
+
             return "Game not found";
         }
     }
